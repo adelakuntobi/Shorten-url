@@ -42,50 +42,23 @@
   <img data-aos="fade-right" class="bg-img" src="images/illustration-working.svg" />
   </header>
   
-  <main>
-    <form action="https://rel.ink/api/links/" method="POST" onloadeddata="nothing">
+  <main id="short" >
+    <form method="POST">
       <div class="form-div">
         <input name="url" id="input" required type="url" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="Shorten a link here">
-        <button onclick="myFunction()" class="shorten-btn btn">Shorten It!</button><br>
+        <button onclick="myFunction()" class="shorten-btn btn">
+          <i id="loader" class="fa fa-refresh fa-spin"></i>Shorten It!</button><br>
       </div>
       <img class="bg" src="./images/bg-shorten-desktop.svg" >
       <i id="provide">Please add a link</i>
     </form>
 
-    <div id="short" class="shortened-links">
+    <div id="tall" class="shortened-links">
       <section>
         <span class="float-left">https://twitter.com/gifttheexplorer</span>
         <hr class="displayNone the-hr">
-        <span id="green" class="green">https://rel.ink/k4ry7d</span>
-        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
-          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
-      </section>
-      <section>
-        <span class="float-left">https://twitter.com/gifttheexplorer</span>
-        <hr class="displayNone the-hr">
-        <span class="green">https://rel.ink/k4ry7d</span>
-        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
-          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
-      </section>
-      <section>
-        <span class="float-left">https://twitter.com/gifttheexplorer</span>
-        <hr class="displayNone the-hr">
-        <span class="green">https://rel.ink/k4ry7d</span>
-        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
-          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
-      </section>
-      <section>
-        <span class="float-left">https://twitter.com/gifttheexplorer</span>
-        <hr class="displayNone the-hr">
-        <span class="green" id="green">https://rel.ink/k4ry7d</span>
-        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
-          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
-      </section>
-      <section>
-        <span class="float-left">https://twitter.com/gifttheexplorer</span>
-        <hr class="displayNone the-hr">
-        <span class="green">https://rel.ink/k4ry7d</span>
-        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
+        <a class="green">https://rel.ink/k4ry7d</a>
+        <button onclick="myFunction()" class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
           <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
       </section>
     </div>
