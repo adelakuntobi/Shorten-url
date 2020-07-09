@@ -67,7 +67,26 @@ nav ul li:hover{
   border-radius: 70px;
   padding: 10px 20px;
 }
-
+#navbar{
+  display: none;
+}
+#mySidenav{
+  background-color: var(--DarkViolet);
+  color: white;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#mySidenav li{
+  list-style: none;
+  padding: 10px 0;
+}
+.new-btn{
+  width: 90%;
+  margin: auto;
+  border-radius: 45px;
+}
 
 /* Header */
 header{
@@ -190,14 +209,10 @@ main section{
   justify-content: space-evenly;
   position: relative;
 }
-.other-hr{
-  width: 70%;
-  position: absolute;
-  border: 5px solid var(--Cyan);
-  bottom: 15%;
-  border-bottom: 0;
+.statistics h3{
+  font-size: 2.2vw;
+  overflow-wrap: break-word;
 }
-
 .div-img{
   background-color: white;
   padding: 10px 30px;
@@ -406,6 +421,9 @@ button .fa {
   }
   .float-left{
     max-width: 93%;
+  }
+  .statistics h3,.text-center h2{
+    font-size: 6vw;
   }
 }
 @media (max-width: 375px){

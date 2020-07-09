@@ -18,23 +18,34 @@
 <body>
   <nav>
     <img src="./images/logo.svg" />
-    <ul id="mySidenav" class="ml-0">
+    <ul class="ml-0">
       <li>Features</li>
       <li>Pricing</li>
       <li>Resources</li>
     </ul>
-    <ul id="mySidenav" class="mr-0">
+    <ul class="mr-0">
       <li>Login</li>
       <li class="sign-up btn">Sign Up</li>
     </ul>
     <span class="open displayNone" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
   </nav>
+  <div data-aos="fade-down" id="navbar" class="mobile-nav">
+    <ul id="mySidenav">
+      <li>Features</li>
+      <li>Pricing</li>
+      <li>Resources</li>
+    </ul>
+    <ul id="mySidenav">
+      <li>Login</li>
+      <li class="new-btn btn">Sign Up</li>
+    </ul>
+  </div>
 
   <header>
     <img data-aos="fade-up"
     data-aos-anchor-placement="center-bottom" class="displayNone illustrate" src="images/illustration-working.svg" />
     <div data-aos="fade-left" class="header-text">
-      <h1>More than just shorter links</h1>
+      <h1 id="header">More than just shorter links</h1>
       <p>Build your brand’s recognition and get detailed insights 
         on how your links are performing.</p>
       <button class="header-btn btn">Get Started</button>
@@ -42,11 +53,11 @@
   <img data-aos="fade-right" class="bg-img" src="images/illustration-working.svg" />
   </header>
   
-  <main id="short" >
-    <form>
+  <main id="short">
+    <form action="#short">
       <div class="form-div">
-        <input name="url" id="input" required type="url" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="Shorten a link here">
-        <button onclick="myFunction()" class="shorten-btn btn">
+        <input name="url" id="input" required type="text" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="Shorten a link here">
+        <button id="short-btn" class="shorten-btn btn">
           <i id="loader" class="fa fa-refresh fa-spin"></i>Shorten It!</button><br>
       </div>
       <img class="bg" src="./images/bg-shorten-desktop.svg" >
@@ -54,13 +65,7 @@
     </form>
 
     <div id="tall" class="shortened-links">
-      <section>
-        <span class="float-left">https://twitter.com/gifttheexplorer</span>
-        <hr class="displayNone the-hr">
-        <a class="green">https://rel.ink/k4ry7d</a>
-        <button onclick="myFunction()" class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
-          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
-      </section>
+  
     </div>
 
     <div>
@@ -70,7 +75,6 @@
           advanced statistics dashboard.</p>
       </div>
 
-      <hr class="other-hr">
       <div class="statistics">
         <div data-aos="fade-up"
      data-aos-duration="500" class="div-img first">
@@ -151,7 +155,8 @@
     Coded by <a href="#">Adelakun Tobiloba</a>.
   </div>
 
-  <script src="./app.js"></script>
+  <script src="./class.js"></script>
+  <script src="./main.js"></script>
   <script>
     AOS.init();
   </script>
