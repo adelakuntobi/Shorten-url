@@ -1,0 +1,395 @@
+
+*{
+  box-sizing: border-box;
+  --Cyan: hsl(180, 66%, 49%);
+  --DarkViolet: hsl(257, 27%, 26%);
+  --Red: hsl(0, 87%, 67%);
+  --Gray: hsl(0, 0%, 75%);
+  --GrayishViolet: hsl(257, 7%, 63%);
+  --VeryDarkBlue: hsl(255, 11%, 22%);
+  --VeryDarkViolet: hsl(260, 8%, 14%);
+}
+body{
+  margin: 0;
+  padding: 0;
+  font: 500 18px 'Poppins', sans-serif;
+  color: #34313c;
+}
+p{
+  color: #9d9ba1;
+}
+.btn:hover{
+  opacity: 0.8;
+}
+/*Navigation Bar*/
+nav,header{
+  display: flex;
+  padding: 20px 8%;
+}
+nav img{
+  margin: auto 0;
+}
+nav ul{
+  padding: 0;
+  margin: auto auto;
+}
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+  font-size: 0.9rem;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+  color: #a2a1a7;
+}
+nav ul li:hover{
+  color: #353439;
+}
+.mr-0{
+  margin-right: 0 !important;
+}
+.ml-0{
+  margin-left: 20px !important;
+}
+.btn{
+  border-radius: 7px;
+  background-color: var(--Cyan);
+  color: white;
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+.sign-up{
+  border-radius: 70px;
+  padding: 10px 20px;
+}
+
+
+/* Header */
+header{
+  padding-right: 0 !important;
+}
+header img{
+  width: 50%;
+  object-fit: contain;
+}
+header div{
+  margin: auto;
+  padding-right: 5%;
+}
+header h1{
+  font-size: 5.5vw;
+  line-height: 1.2;
+  margin: 0;
+}
+.header-btn{
+  padding: 10px 35px !important;
+  font-size: 1rem;
+  border-radius: 45px !important;
+}
+
+/* Form */
+form,.boost{
+  background-color: var(--DarkViolet);
+  border-radius: 7px;
+  padding: 50px 4% 20px;
+  height: 140px;
+  position: relative;
+}
+.form-div{
+  display: flex;
+}
+form img,.boost img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 7px;
+}
+form input{
+  width: 81%;
+  margin-right: 2%;
+  border-radius: 7px;
+  padding: 15px;
+  outline: 0;
+  border: 0;
+  z-index: 200;
+}
+form i{
+  color: var(--Red);
+  display: block;
+  text-align: left;
+  z-index: 200;
+  position: relative;
+  font-size: 13px;
+  margin: 8px 0;
+  display: none;
+}
+.shorten-btn{
+  padding: 10px;
+  z-index: 200;
+  width: 145px;
+}
+
+/* Main Section of the page */
+main{
+  background-color: #f0f1f6;
+  padding: 40px 7% 100px;
+  position: relative;
+}
+main section{
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.float-left{
+  margin: auto  0;
+}
+.copy-btn{
+  width: 80px;
+  padding: 10px;
+  margin: auto 0 auto 20px !important;
+}
+.green{
+  margin: auto;
+  margin-right: 0;
+  color: var(--Cyan);
+}
+
+/* Text-center */
+.text-center{
+  margin: 25vh auto 76px;
+  text-align: center;
+  width: 50%;
+}
+.text-center p{
+  color: #a1a1ab;
+  font-weight: 400;
+}
+.statistics{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.other-hr{
+  width: 70%;
+  position: absolute;
+  border: 3px solid var(--Cyan);
+  bottom: 15%;
+}
+
+.div-img{
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 7px;
+}
+.div-img div{
+  background-color: #3a3053;
+  line-height: 1;
+  padding: 18px;
+  width: fit-content;
+  border-radius: 50%;
+  margin-top: -21%;
+}
+.div-img p{
+  font-size: 15px;
+}
+.second{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* Boost your links today */
+.boost{
+  color: white;
+  text-align: center;
+  height: auto;
+  border-radius: 0;
+  padding: 30px;
+}
+.boost h2{
+  margin: 10px 0;
+  font-size: 2.5vw;
+}
+.boost h2,.boost button{
+  z-index: 200;
+  position: relative;
+}
+
+/* Footer */
+footer{
+  background-color: #232027;
+  color: white;
+  display: flex;
+  padding: 20px 7%;
+}
+footer img{
+  margin: auto auto auto 0;
+}
+footer ul{
+  padding: 10px 20px;
+  margin: 0 0 auto;
+}
+footer ul:first-of-type{
+  margin-left: auto;
+}
+footer ul li{
+  list-style: none;
+  font-weight: 400;
+  color: #b8b6bb;
+  font-size: 15px;
+  line-height: 2;
+}
+footer ul li:first-of-type{
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 15px;
+  color: white;
+  cursor: default;
+}
+footer section{
+  margin: auto 0 auto auto;
+}
+footer .fa{
+  padding: 10px;
+  font-size: 20px !important;
+}
+footer .fa:hover,
+footer li:hover{
+  cursor: pointer;
+  color: #2fccc5;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.displayNone{
+  display: none;
+}
+
+@media (max-width: 660px){
+  body{
+    font-size: small;
+  }
+  .copy-btn,.open{
+    margin: auto;
+    margin-right: 20px !important;
+  }
+  .green{
+    margin: auto auto auto 0;
+  }
+
+  .displayNone{
+    display: block;
+  }
+  .the-hr{
+    width: 100%;
+    margin: 3px auto;
+    /* border-color: hsl(180, 66%, 49%); */
+    border-top: 1px solid #9e9aa7;
+    border-bottom: none;
+}
+  .text-center{
+    width: 90%;
+  }
+  main section{
+    padding: 10px 0;
+  }
+  .float-left,.green{
+    padding-left: 20px;
+    font-size: small;
+  }
+  .form-div,.statistics,footer,header{
+    display: block;
+  }
+  form{
+    height: auto;
+    padding: 30px 7%;
+  }
+  .shorten-btn,form input{
+    width: 100%;
+  }
+  form input{
+    margin-bottom: 20px;
+  }
+  .second{
+    margin: 70px 0;
+  }
+  .other-hr,nav ul,.bg-img{
+    display: none;
+  }
+  .div-img div{
+    margin: auto;
+    margin-top: -13%;
+  }
+  footer,.div-img{
+    text-align: center;
+  }
+  .boost h2{
+    font-size: 5.5vw;
+  }
+  .illustrate{
+    margin: 25px 0;
+    width: 100%;
+  }
+  header{
+    padding-right: 8% !important;
+  }
+  header h1{
+    font-size: 10vw;
+  }
+}
+@media (max-width: 375px){
+  .copy-btn{
+    width: 100%;
+    margin: 0 20px !important;
+  }
+  .green{
+    margin: 10px auto 10px 0;
+  }
+  .div-img div{
+    margin-top: -20%;
+  }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Shortly URL shortening API Challenge</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    .attribution { font-size: 13px; text-align: center; padding-bottom: 20px; background-color: #232027;color: white;}
+    .attribution a { color: #2acfcf; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="./images/logo.svg" />
+    <ul id="mySidenav" class="ml-0">
+      <li>Features</li>
+      <li>Pricing</li>
+      <li>Resources</li>
+    </ul>
+    <ul id="mySidenav" class="mr-0">
+      <li>Login</li>
+      <li class="sign-up btn">Sign Up</li>
+    </ul>
+    <span class="open displayNone" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </nav>
+
+  <header>
+    <img class="displayNone illustrate" src="images/illustration-working.svg" />
+    <div class="header-text">
+      <h1>More than just shorter links</h1>
+      <p>Build your brand’s recognition and get detailed insights 
+        on how your links are performing.</p>
+      <button class="header-btn btn">Get Started</button>
+    </div>
+  <img class="bg-img" src="images/illustration-working.svg" />
+  </header>
+  
+  <main>
+    <form action="https://rel.ink/api/links/" method="POST">
+      <div class="form-div">
+        <input id="input" required type="url" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="Shorten a link here">
+        <button onclick="myFunction()" class="shorten-btn btn">Shorten It!</button><br>
+      </div>
+      <!-- <img src="./images/bg-shorten-desktop.svg" > -->
+      <i id="provide">Please add a link</i>
+    </form>
+
+    <div class="shortened-links">
+      <section>
+        <span class="float-left">https://twitter.com/gifttheexplorer</span>
+        <hr class="displayNone the-hr">
+        <span id="green" class="green">https://rel.ink/k4ry7d</span>
+        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
+      </section>
+      <section>
+        <span class="float-left">https://twitter.com/gifttheexplorer</span>
+        <hr class="displayNone the-hr">
+        <span class="green">https://rel.ink/k4ry7d</span>
+        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
+      </section>
+      <section>
+        <span class="float-left">https://twitter.com/gifttheexplorer</span>
+        <hr class="displayNone the-hr">
+        <span class="green">https://rel.ink/k4ry7d</span>
+        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
+      </section>
+      <section>
+        <span class="float-left">https://twitter.com/gifttheexplorer</span>
+        <hr class="displayNone the-hr">
+        <span class="green" id="green">https://rel.ink/k4ry7d</span>
+        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
+      </section>
+      <section>
+        <span class="float-left">https://twitter.com/gifttheexplorer</span>
+        <hr class="displayNone the-hr">
+        <span class="green">https://rel.ink/k4ry7d</span>
+        <button class="copy-btn btn tooltip" id="copy" onmouseout="outFunc()" >
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy</button>
+      </section>
+    </div>
+
+    <div>
+      <div class="text-center">
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our 
+          advanced statistics dashboard.</p>
+      </div>
+
+      <hr class="other-hr">
+      <div class="statistics">
+        <div class="div-img first">
+          <div>
+            <img src="./images/icon-brand-recognition.svg">
+          </div>
+          <h3>Brand Recognition</h3>
+          <p>Boost your brand recognition with each click. Generic links don’t 
+            mean a thing. Branded links help instil confidence in your content.</p>
+        </div>
+        <div class="div-img second">
+          <div>
+            <img src="./images/icon-detailed-records.svg">
+          </div>
+          <h3>Detailed Records</h3>
+          <p>Gain insights into who is clicking your links. Knowing when and where 
+            people engage with your content helps inform better decisions.</p>
+        </div>
+        <div class="div-img third">
+          <div>
+            <img src="./images/icon-fully-customizable.svg">
+          </div>
+          <h3>Fully Customizable</h3>
+          <p>Improve brand awareness and content discoverability through customizable 
+            links, supercharging audience engagement.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="boost">
+    <img src="./images/bg-boost-desktop.svg">
+    <h2>Boost your links today</h2>
+    <button class="header-btn btn">Get Started</button>  
+  </div>
+
+  <footer>
+    <img src="./images/logo1.svg">
+    <ul>
+      <li>Features</li>
+      <li>Link Shortening</li>
+      <li>Branded Links</li>
+      <li>Analytics</li>
+    </ul>
+    <ul>
+      <li>Resources</li>
+      <li>Blog</li>
+      <li>Developers</li>
+      <li>Support</li>
+    </ul>
+    <ul>
+      <li>Company</li>
+      <li>About</li>
+      <li>Our Team</li>
+      <li>Careers</li>
+      <li>Contact</li>
+    </ul>
+    <section>
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-pinterest"></i>
+      <i class="fa fa-instagram"></i>
+    </section>
+  </footer>
+  
+
+  
+
+  
+
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Adelakun Tobiloba</a>.
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
