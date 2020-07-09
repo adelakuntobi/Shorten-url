@@ -40,7 +40,7 @@ if (!input.checkValidity()) {
 // }
 
 document.querySelector(".copy-btn").addEventListener("click", function () {
-  document.querySelector(".copy-btn").innerHTML = "Copied!😁";
+  document.querySelector(".copy-btn").innerHTML = "Copied!";
   document.querySelector(".copy-btn").style.backgroundColor = "#3a3053";
   var copyText = document.getElementById("green").innerHTML;
   copyText.select();
