@@ -18,30 +18,29 @@ if (!input.checkValidity()) {
  }
  else{
   document.getElementById("provide").style.display = "none";
-  sendData()
+  // sendData()
  }
 }
 }
 
 
-function sendData() {
-  (async () => {
-    const rawResponse = await fetch('https://rel.ink/api/links/', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({"url": theUrl})
-    });
-    const content = await rawResponse.json();
-  
-    console.log(content);
-  })();
-}
+// function sendData() {
+//   (async () => {
+//     const rawResponse = await fetch('https://rel.ink/api/links/', {
+//       method: 'GET',
+//       headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify({"url": theUrl})
+//     });
+//     const content = await rawResponse.json();
+//     console.log(content);
+//   })();
+// }
 
 document.querySelector(".copy-btn").addEventListener("click", function () {
-  document.querySelector(".copy-btn").innerHTML = "Copied!";
+  document.querySelector(".copy-btn").innerHTML = "Copied!😁";
   document.querySelector(".copy-btn").style.backgroundColor = "#3a3053";
   var copyText = document.getElementById("green").innerHTML;
   copyText.select();
@@ -49,11 +48,11 @@ document.querySelector(".copy-btn").addEventListener("click", function () {
   document.execCommand("copy");
     
   var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied link";
+  tooltip.innerHTML = "Copied link👏";
 })
 function outFunc() {
   var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
+  tooltip.innerHTML = "Copy to clipboard😉";
 }
 
 

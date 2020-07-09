@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Shortly URL shortening API Challenge</title>
   <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     .attribution { font-size: 13px; text-align: center; padding-bottom: 20px; background-color: #232027;color: white;}
@@ -29,27 +31,28 @@
   </nav>
 
   <header>
-    <img class="displayNone illustrate" src="images/illustration-working.svg" />
-    <div class="header-text">
+    <img data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom" class="displayNone illustrate" src="images/illustration-working.svg" />
+    <div data-aos="fade-left" class="header-text">
       <h1>More than just shorter links</h1>
       <p>Build your brand’s recognition and get detailed insights 
         on how your links are performing.</p>
       <button class="header-btn btn">Get Started</button>
     </div>
-  <img class="bg-img" src="images/illustration-working.svg" />
+  <img data-aos="fade-right" class="bg-img" src="images/illustration-working.svg" />
   </header>
   
   <main>
-    <form action="https://rel.ink/api/links/" method="POST">
+    <form action="https://rel.ink/api/links/" method="POST" onloadeddata="nothing">
       <div class="form-div">
-        <input id="input" required type="url" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="Shorten a link here">
+        <input name="url" id="input" required type="url" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="Shorten a link here">
         <button onclick="myFunction()" class="shorten-btn btn">Shorten It!</button><br>
       </div>
-      <!-- <img src="./images/bg-shorten-desktop.svg" > -->
+      <img class="bg" src="./images/bg-shorten-desktop.svg" >
       <i id="provide">Please add a link</i>
     </form>
 
-    <div class="shortened-links">
+    <div id="short" class="shortened-links">
       <section>
         <span class="float-left">https://twitter.com/gifttheexplorer</span>
         <hr class="displayNone the-hr">
@@ -96,7 +99,8 @@
 
       <hr class="other-hr">
       <div class="statistics">
-        <div class="div-img first">
+        <div data-aos="fade-up"
+     data-aos-duration="500" class="div-img first">
           <div>
             <img src="./images/icon-brand-recognition.svg">
           </div>
@@ -104,7 +108,8 @@
           <p>Boost your brand recognition with each click. Generic links don’t 
             mean a thing. Branded links help instil confidence in your content.</p>
         </div>
-        <div class="div-img second">
+        <div data-aos="fade-up"
+     data-aos-duration="500" class="div-img second">
           <div>
             <img src="./images/icon-detailed-records.svg">
           </div>
@@ -112,7 +117,8 @@
           <p>Gain insights into who is clicking your links. Knowing when and where 
             people engage with your content helps inform better decisions.</p>
         </div>
-        <div class="div-img third">
+        <div data-aos="fade-up"
+     data-aos-duration="500" class="div-img third">
           <div>
             <img src="./images/icon-fully-customizable.svg">
           </div>
@@ -173,5 +179,8 @@
   </div>
 
   <script src="./app.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

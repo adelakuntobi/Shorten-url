@@ -183,8 +183,9 @@ main section{
 .other-hr{
   width: 70%;
   position: absolute;
-  border: 3px solid var(--Cyan);
+  border: 5px solid var(--Cyan);
   bottom: 15%;
+  border-bottom: 0;
 }
 
 .div-img{
@@ -201,7 +202,7 @@ main section{
   margin-top: -21%;
 }
 .div-img p{
-  font-size: 15px;
+  font-size: 1.2vw;
 }
 .second{
   margin-left: 40px;
@@ -357,7 +358,7 @@ footer li:hover{
   .second{
     margin: 70px 0;
   }
-  .other-hr,nav ul,.bg-img{
+  .other-hr,nav ul,.bg-img,.bg{
     display: none;
   }
   .div-img div{
