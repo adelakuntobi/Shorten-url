@@ -349,7 +349,7 @@ button .fa {
     font-size: small;
   }
   nav{
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
   .copy-btn,.open{
     margin: auto;
