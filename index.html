@@ -54,7 +54,7 @@
   </header>
   
   <main id="short">
-    <form action="#short">
+    <form action="#short" onsubmit="event.preventDefault()">
       <div class="form-div">
         <input name="url" id="input" required type="text" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" placeholder="Shorten a link here">
         <button id="short-btn" class="shorten-btn btn">
@@ -141,14 +141,6 @@
       <i class="fa fa-instagram"></i>
     </section>
   </footer>
-  
-
-  
-
-  
-
-
-
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
