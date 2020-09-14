@@ -15,12 +15,12 @@ document.getElementById("short-btn").addEventListener("click", function () {
     document.getElementById("provide").style.display = "block";
   }
   else{
+    sendData()
     document.getElementById("provide").style.display = "none";
     document.getElementById("loader").style.display = "inline-block"
     setTimeout(() => {
       document.getElementById("loader").style.display = "none"
-    }, 3000);
-    sendData()
+    }, 3500);
   }
 })
 
@@ -54,6 +54,9 @@ function sendData() {
     var linkId = content.hashid;
     const theDetails = new Link(linkUrl, linkId);
     saveData(theDetails)
+  })
+  .catch((err) => {
+    console.log(err)
   })
 };
 
@@ -97,22 +100,22 @@ function showData() {
 }
 
 
-document.querySelector(".copy-btn").addEventListener("click", function () {
-  document.querySelector(".copy-btn").innerHTML = "Copied!";
-  document.querySelector(".copy-btn").style.backgroundColor = "#3a3053";
-  var copyText = document.getElementById("green");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-})
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
-}
+// document.querySelector(".copy-btn").addEventListener("click", function () {
+//   document.querySelector(".copy-btn").innerHTML = "Copied!";
+//   document.querySelector(".copy-btn").style.backgroundColor = "#3a3053";
+//   var copyText = document.getElementById("green");
+//   copyText.select();
+//   copyText.setSelectionRange(0, 99999);
+//   document.execCommand("copy");
+// })
+// function outFunc() {
+//   var tooltip = document.getElementById("myTooltip");
+//   tooltip.innerHTML = "Copy to clipboard";
+// }
 
 
 function openNav() {
-  document.getElementById("navbar").style.transition = "all 5s ease-in-out"
+  // document.getElementById("navbar").style.transition = "all .5s ease-in-out"
   if(document.getElementById("navbar").style.display === "block"){
     document.getElementById("navbar").style.display = "none";
   }
